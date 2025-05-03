@@ -1,0 +1,493 @@
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1" name="viewport"/>
+  <title>
+   Web Designer Portfolio
+  </title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+  <style>
+   @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+   body {
+     font-family: 'Inter', sans-serif;
+   }
+  </style>
+ </head>
+ <body class="bg-[#1a1a1a] text-white">
+  <div class="max-w-6xl mx-auto rounded-3xl overflow-hidden p-6 md:p-12">
+   <nav class="flex items-center justify-between mb-12 relative">
+    <div class="font-semibold text-white text-base">Logo</div>
+    <!-- Mobile menu button -->
+    <button aria-label="Toggle menu" class="md:hidden text-gray-300 text-2xl focus:outline-none" id="mobile-menu-button">
+     <i class="fas fa-bars"></i>
+    </button>
+    <!-- Desktop menu -->
+    <ul class="hidden md:flex space-x-8 text-gray-300 text-sm font-normal">
+     <li><a class="hover:text-white transition" href="#">Home</a></li>
+     <li class="relative group">
+      <button class="hover:text-white transition flex items-center space-x-1 focus:outline-none">
+       <span>Projects</span>
+       <i class="fas fa-chevron-down text-xs"></i>
+      </button>
+      <ul class="absolute left-0 top-full mt-2 w-40 bg-[#1a1a1a] border border-gray-700 rounded-md opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-opacity z-10">
+       <li><a class="block px-4 py-2 text-gray-300 hover:bg-gray-700 hover:text-white" href="#">Web Design</a></li>
+       <li><a class="block px-4 py-2 text-gray-300 hover:bg-gray-700 hover:text-white" href="#">Graphic Design</a></li>
+       <li><a class="block px-4 py-2 text-gray-300 hover:bg-gray-700 hover:text-white" href="#">Branding</a></li>
+      </ul>
+     </li>
+     <li><a class="hover:text-white transition" href="#">About</a></li>
+     <li><a class="hover:text-white transition" href="#">Contacts</a></li>
+    </ul>
+    <div class="hidden md:flex items-center space-x-6 text-gray-300 text-lg">
+     <span class="border-l border-gray-600 h-6"></span>
+     <a aria-label="BDownload" class="hover:text-white transition relative group" href="#">
+      <i class="fas fa-download cursor-pointer"></i>
+      <div class="absolute bottom-full mb-2 left-1/2 transform -translate-x-1/2 bg-white text-black text-xs font-semibold rounded px-3 py-1 opacity-0 pointer-events-none group-hover:opacity-100 group-hover:pointer-events-auto transition-opacity whitespace-nowrap">
+       Download Resume
+      </div>
+     </a>
+     <a aria-label="LinkedIn" class="hover:text-white transition relative group" href="#">
+      <i class="fab fa-linkedin cursor-pointer"></i>
+      <div class="absolute bottom-full mb-2 left-1/2 transform -translate-x-1/2 bg-white text-black text-xs font-semibold rounded px-3 py-1 opacity-0 pointer-events-none group-hover:opacity-100 group-hover:pointer-events-auto transition-opacity whitespace-nowrap">
+       LinkedIn
+      </div>
+     </a>
+    </div>
+   </nav>
+   <!-- Mobile dropdown menu -->
+   <div id="mobile-menu" class="md:hidden bg-[#1a1a1a] border border-gray-700 rounded-md p-4 space-y-4 hidden">
+    <a href="#" class="block text-gray-300 hover:text-white transition px-2 py-1 rounded">Home</a>
+    <div>
+     <button id="mobile-projects-button" class="w-full flex justify-between items-center text-gray-300 hover:text-white transition px-2 py-1 rounded focus:outline-none">
+      <span>Projects</span>
+      <i class="fas fa-chevron-down text-xs transition-transform"></i>
+     </button>
+     <ul id="mobile-projects-menu" class="mt-2 ml-4 border-l border-gray-600 pl-4 space-y-2 hidden">
+      <li><a class="block text-gray-300 hover:text-white transition" href="#">Web Design</a></li>
+      <li><a class="block text-gray-300 hover:text-white transition" href="#">Graphic Design</a></li>
+      <li><a class="block text-gray-300 hover:text-white transition" href="#">Branding</a></li>
+     </ul>
+    </div>
+    <a href="#" class="block text-gray-300 hover:text-white transition px-2 py-1 rounded">About</a>
+    <a href="#" class="block text-gray-300 hover:text-white transition px-2 py-1 rounded">Contacts</a>
+   </div>
+   <div class="flex flex-col md:flex-row items-center md:items-start gap-8 md:gap-0 mt-8">
+    <div class="flex flex-col justify-center md:w-1/2 space-y-6">
+     <div class="text-white font-semibold text-xs uppercase tracking-widest">Hi, I'm Saul</div>
+     <h1 class="text-white font-extrabold text-4xl md:text-5xl leading-tight">
+      I'M AWS<br/>SOLUTION ARCHITECT
+     </h1>
+     <p class="text-gray-400 text-sm md:text-base max-w-md">
+      AWS Cloud Solution Architect skilled in designing scalable, secure cloud systems using EC2, S3, VPC, RDS, Lambda, Terraform, and CI/CD tools. Preparing for AWS Solutions Architect – Associate certification.
+     </p>
+     <button class="w-max px-5 py-2 border border-white rounded-md text-xs font-semibold tracking-widest hover:bg-white hover:text-black transition">
+      View My Prjects
+     </button>
+    </div>
+    <div class="md:w-1/2 flex justify-center md:justify-end">
+     <img alt="Young woman with long dark hair smiling, wearing a light-colored top" class="rounded-full border-4 border-white max-w-full h-auto" height="400" src="https://storage.googleapis.com/a1aa/image/0476a8b6-8858-4fa9-0dc5-ece0157b0dc9.jpg" width="400"/>
+    </div>
+   </div>
+   <!-- About Me Section -->
+   <div class="max-w-6xl mx-auto mt-16 px-4 md:px-0">
+    <h2 class="text-white text-3xl font-bold mb-2">About Me</h2>
+    <h3 class="text-white text-xl font-semibold mb-4">Shivani Verma</h3>
+    <p class="text-gray-300 mb-2 font-semibold">Aspiring AWS Cloud Solution Architect</p>
+    <p class="text-gray-400 max-w-3xl leading-relaxed">
+     Passionate about designing secure, scalable, and cost-efficient cloud architectures using AWS and DevOps tools. I have hands-on experience in automation using Terraform and CloudFormation, and I enjoy building real-world solutions with Python, Linux, and cloud-native services. Currently enhancing my skills through practical projects and preparing for the AWS Certified Solutions Architect – Associate certification.
+    </p>
+   </div>
+
+   <!-- Experience/Training Title -->
+   <div class="max-w-6xl mx-auto mt-16 px-4 md:px-0">
+    <h2 class="text-white text-3xl font-bold mb-6">Experience / Training</h2>
+   </div>
+
+   <!-- Flip Cards Section -->
+   <div class="p-6 flex flex-col md:flex-row items-center justify-center gap-6 mt-6">
+    <div class="flip-card w-full sm:w-5/6 md:w-1/3 h-[360px] cursor-pointer">
+     <div class="flip-card-inner">
+      <div class="flip-card-front flex flex-col items-center">
+       <img alt="Official AWS logo" class="mb-4 rounded-md" height="80" src="https://upload.wikimedia.org/wikipedia/commons/9/93/Amazon_Web_Services_Logo.svg" width="80"/>
+       <div class="flex items-center space-x-2 text-xl">
+        <span>🔹</span>
+        <h3 class="font-bold text-white">Cloud Solution Intern</h3>
+       </div>
+       <div class="flex items-center space-x-2 text-gray-400 mb-1">
+        <span>📍</span>
+        <span>APTRON, Gurugram</span>
+       </div>
+       <div class="flex items-center space-x-2 text-gray-400 mb-4">
+        <span>🗓️</span>
+        <span>Jan 2025 – Present</span>
+       </div>
+      </div>
+      <div class="flip-card-back">
+       <h4 class="font-semibold mb-2 text-white">Highlights:</h4>
+       <ul class="list-disc list-inside space-y-1 text-gray-300 text-sm">
+        <li>Designed secure, scalable AWS architectures using EC2, S3, VPC, RDS.</li>
+        <li>Led cloud migrations and deployments with cross-functional teams.</li>
+        <li>Automated infrastructure using CloudFormation &amp; Terraform.</li>
+        <li>Improved performance and cost efficiency with CloudWatch &amp; Trusted Advisor.</li>
+       </ul>
+      </div>
+     </div>
+    </div>
+    <div class="flip-card w-full sm:w-5/6 md:w-1/3 h-[360px] cursor-pointer">
+     <div class="flip-card-inner">
+      <div class="flip-card-front flex flex-col items-center">
+       <img alt="Python logo" class="mb-4 h-10 w-10" src="https://upload.wikimedia.org/wikipedia/commons/c/c3/Python-logo-notext.svg"/>
+       <span class="text-xl flex items-center space-x-2">
+        <span>🔹</span>
+        <h3 class="font-bold text-white">Python with Data Science Trainee</h3>
+       </span>
+       <div class="flex items-center space-x-2 text-gray-400 mb-1 mt-2">
+        <span>📍</span>
+        <span>Uncodemy, Noida</span>
+       </div>
+       <div class="flex items-center space-x-2 text-gray-400 mb-4">
+        <span>🗓️</span>
+        <span>June 2024 – July 2024</span>
+       </div>
+      </div>
+      <div class="flip-card-back">
+       <h4 class="font-semibold mb-2 text-white">Highlights:</h4>
+       <ul class="list-disc list-inside space-y-1 text-gray-300 text-sm">
+        <li>Built and evaluated ML models using Scikit-learn.</li>
+        <li>Hands-on with Pandas, NumPy, Matplotlib for data analysis.</li>
+        <li>Worked on NLP tasks with NLTK and spaCy.</li>
+        <li>Applied real-world data cleaning, preprocessing, and model tuning.</li>
+       </ul>
+      </div>
+     </div>
+    </div>
+    <div class="flip-card w-full sm:w-5/6 md:w-1/3 h-[360px] cursor-pointer">
+     <div class="flip-card-inner">
+      <div class="flip-card-front flex flex-col items-center">
+       <img alt="Java logo" class="mb-4 h-10 w-10" src="https://upload.wikimedia.org/wikipedia/en/3/30/Java_programming_language_logo.svg"/>
+       <span class="text-xl flex items-center space-x-2">
+        <span>🔹</span>
+        <h3 class="font-bold text-white">Java Developer Intern</h3>
+       </span>
+       <div class="flex items-center space-x-2 text-gray-400 mb-1 mt-2">
+        <span>📍</span>
+        <span>Solitaire Infosys, Mohali</span>
+       </div>
+       <div class="flex items-center space-x-2 text-gray-400 mb-4">
+        <span>🗓️</span>
+        <span>June 2023 – July 2023</span>
+       </div>
+      </div>
+      <div class="flip-card-back">
+       <h4 class="font-semibold mb-2 text-white">Highlights:</h4>
+       <ul class="list-disc list-inside space-y-1 text-gray-300 text-sm">
+        <li>Developed backend applications using Java Servlets and JSP.</li>
+        <li>Applied OOP concepts, multithreading, and collections.</li>
+        <li>Solved algorithmic problems and built web apps.</li>
+        <li>Gained foundational knowledge in server-side programming.</li>
+       </ul>
+      </div>
+     </div>
+    </div>
+   </div>
+
+   <!-- Skills Badges Section -->
+   <div class="max-w-6xl mx-auto mt-16 px-4 md:px-0">
+    <h2 class="text-white text-3xl font-bold mb-6">Skills</h2>
+    <div class="space-y-6 p-6 bg-[#111111] rounded-lg shadow-lg">
+     <div class="cursor-pointer hover:bg-gray-700 rounded-md p-3 transition">
+      <h3 class="text-white font-semibold mb-1">🔹 Cloud Platforms</h3>
+      <p class="text-gray-400">AWS (EC2, S3, IAM, VPC, Lambda, RDS, DynamoDB, CloudFront, Route 53)</p>
+     </div>
+     <div class="cursor-pointer hover:bg-gray-700 rounded-md p-3 transition">
+      <h3 class="text-white font-semibold mb-1">🔹 Infrastructure as Code</h3>
+      <p class="text-gray-400">Terraform, AWS CloudFormation, Ansible</p>
+     </div>
+     <div class="cursor-pointer hover:bg-gray-700 rounded-md p-3 transition">
+      <h3 class="text-white font-semibold mb-1">🔹 DevOps Tools</h3>
+      <p class="text-gray-400">Jenkins, GitHub, AWS CodePipeline, Helm, ArgoCD</p>
+     </div>
+     <div class="cursor-pointer hover:bg-gray-700 rounded-md p-3 transition">
+      <h3 class="text-white font-semibold mb-1">🔹 Monitoring &amp; Admin</h3>
+      <p class="text-gray-400">CloudWatch, CloudTrail, Prometheus, Grafana, Linux (Ubuntu, RHEL)</p>
+     </div>
+     <div class="cursor-pointer hover:bg-gray-700 rounded-md p-3 transition">
+      <h3 class="text-white font-semibold mb-1">🔹 Programming</h3>
+      <p class="text-gray-400">Python, Bash, SQL, YAML, Shell Scripting, CRON Jobs</p>
+     </div>
+     <div class="cursor-pointer hover:bg-gray-700 rounded-md p-3 transition">
+      <h3 class="text-white font-semibold mb-1">🔹 Networking &amp; Security</h3>
+      <p class="text-gray-400">VPC, Subnets, Security Groups, NACLs, VPN, WAF, Shield</p>
+     </div>
+    </div>
+   </div>
+  </div>
+  <style>
+   .flip-card {
+      perspective: 1000px;
+    }
+    .flip-card-inner {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      transition: transform 0.6s;
+      transform-style: preserve-3d;
+      border-radius: 1rem;
+      box-shadow: 0 10px 15px rgba(0, 0, 0, 0.5);
+    }
+    .flip-card:hover .flip-card-inner {
+      transform: rotateY(180deg);
+    }
+    .flip-card-front,
+    .flip-card-back {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      backface-visibility: hidden;
+      border-radius: 1rem;
+      box-shadow: 0 10px 15px rgba(0, 0, 0, 0.5);
+    }
+    .flip-card-front {
+      background: linear-gradient(135deg, #1f2937, #374151);
+      color: white;
+      padding: 1.5rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: start;
+      border: 2px solid #4b5563;
+      align-items: center;
+    }
+    .flip-card-back {
+      background: linear-gradient(135deg, #374151, #1f2937);
+      color: #d1d5db;
+      padding: 1.5rem;
+      transform: rotateY(180deg);
+      overflow-y: auto;
+      border: 2px solid #4b5563;
+    }
+  </style>
+  <script>
+   const mobileMenuButton = document.getElementById('mobile-menu-button');
+   const mobileMenu = document.getElementById('mobile-menu');
+   const mobileProjectsButton = document.getElementById('mobile-projects-button');
+   const mobileProjectsMenu = document.getElementById('mobile-projects-menu');
+   const projectsChevron = mobileProjectsButton.querySelector('i');
+   mobileMenuButton.addEventListener('click', () => {
+     mobileMenu.classList.toggle('hidden');
+   });
+   mobileProjectsButton.addEventListener('click', () => {
+     mobileProjectsMenu.classList.toggle('hidden');
+     projectsChevron.classList.toggle('rotate-180');
+   });
+  </script>
+
+<style>
+   /* Advanced animation for Education section */
+   @keyframes slideFadeIn {
+     0% {
+       opacity: 0;
+       transform: translateY(20px);
+     }
+     100% {
+       opacity: 1;
+       transform: translateY(0);
+     }
+   }
+   .education-section {
+     animation: slideFadeIn 1s ease forwards;
+     opacity: 0;
+   }
+   .education-card {
+     background: linear-gradient(135deg, #1f2937, #374151);
+     border-radius: 1rem;
+     padding: 1.5rem;
+     box-shadow: 0 10px 15px rgba(0,0,0,0.5);
+     border: 2px solid #4b5563;
+     transition: transform 0.3s ease, box-shadow 0.3s ease;
+   }
+   .education-card:hover {
+     transform: translateY(-8px);
+     box-shadow: 0 15px 25px rgba(59, 130, 246, 0.7);
+   }
+   .education-title {
+     font-weight: 700;
+     font-size: 1.25rem;
+     color: white;
+     margin-bottom: 0.25rem;
+   }
+   .education-subtitle {
+     font-weight: 600;
+     color: #9ca3af;
+     margin-bottom: 0.5rem;
+   }
+   .education-dates {
+     color: #60a5fa;
+     font-weight: 600;
+     margin-bottom: 1rem;
+   }
+   .education-desc {
+     color: #d1d5db;
+     line-height: 1.5;
+   }
+  </style>
+ </head>
+ <body class="bg-[#1a1a1a] text-white">
+  <div class="max-w-6xl mx-auto rounded-3xl overflow-hidden p-6 md:p-12">
+   <!-- ... existing content above ... -->
+
+   <!-- Education Section -->
+   <section class="education-section max-w-6xl mx-auto mt-20 px-4 md:px-0">
+    <h2 class="text-white text-3xl font-bold mb-8 border-b-4 border-blue-500 inline-block pb-2">
+     🎓 Education
+    </h2>
+    <div class="space-y-8">
+     <div class="education-card">
+      <h3 class="education-title">Bachelor of Technology (B.Tech), Computer Science Engineering</h3>
+      <p class="education-subtitle">Sardar Beant Singh State University, Gurdaspur</p>
+      <p class="education-dates">📅 2021 – 2025  📊 CGPA: 8.7/10</p>
+      <p class="education-desc">
+       Focused on core computer science concepts, cloud computing, and software development.<br/>
+       Actively involved in AWS projects and hands-on labs to build real-world skills.
+      </p>
+     </div>
+     <div class="education-card">
+      <h3 class="education-title">Senior Secondary (Class XII), Science (Non-Medical)</h3>
+      <p class="education-subtitle">Lovely Higher Secondary School, Dansal, Jammu</p>
+      <p class="education-dates">📅 2020 – 2021  📈 Percentage: 95.6%</p>
+      <p class="education-desc">
+       Excelled in Physics, Chemistry, and Mathematics with a strong foundation in analytical thinking and problem-solving.
+      </p>
+     </div>
+    </div>
+   </section>
+
+   <!-- Contact Me Section -->
+   <section class="max-w-7xl mx-auto p-6 md:p-12 mt-20 bg-gray-900 rounded-lg shadow-lg" aria-label="Contact Me Section">
+    <h2 class="text-4xl font-extrabold text-center text-gray-100 mb-12 underline decoration-blue-500 decoration-4 underline-offset-8">
+     Let’s Connect
+    </h2>
+    <div class="flex flex-col md:flex-row gap-12">
+     <!-- Left Column: Contact Info Cards -->
+     <div class="md:w-1/2 grid grid-cols-1 gap-6">
+      <!-- Email Card -->
+      <a href="mailto:shivani909274@gmail.com" class="glow-hover bg-gray-800 rounded-xl p-6 shadow-md flex items-center space-x-6 cursor-pointer hover:bg-blue-900 transition">
+       <i class="fas fa-envelope text-4xl text-blue-500 animate-pulse"></i>
+       <div>
+        <h3 class="text-gray-300 font-semibold mb-1">📧 Email</h3>
+        <p class="text-white underline">shivani909274@gmail.com</p>
+       </div>
+      </a>
+      <!-- Phone Card -->
+      <a href="tel:+919103238778" class="glow-hover bg-gray-800 rounded-xl p-6 shadow-md flex items-center space-x-6 cursor-pointer hover:bg-green-900 transition">
+       <i class="fas fa-phone-alt text-4xl text-green-500 animate-bounce"></i>
+       <div>
+        <h3 class="text-gray-300 font-semibold mb-1">📱 Phone</h3>
+        <p class="text-white underline">+91 9103238778</p>
+       </div>
+      </a>
+      <!-- LinkedIn Card -->
+      <a href="https://www.linkedin.com/in/shivani909274" target="_blank" rel="noopener noreferrer" class="glow-hover bg-gray-800 rounded-xl p-6 shadow-md flex items-center space-x-6 cursor-pointer hover:bg-blue-700 transition">
+       <i class="fab fa-linkedin text-4xl text-blue-600 animate-pulse"></i>
+       <div>
+        <h3 class="text-gray-300 font-semibold mb-1">🔗 LinkedIn</h3>
+       </div>
+      </a>
+      <!-- Location Card -->
+      <div class="bg-gray-800 rounded-xl p-6 shadow-md flex items-center space-x-6">
+       <i class="fas fa-map-marker-alt text-4xl text-red-500 animate-bounce"></i>
+       <div>
+        <h3 class="text-gray-300 font-semibold mb-1">📍 Location</h3>
+        <p class="text-white">Gurugram, India</p>
+       </div>
+      </div>
+     </div>
+
+     <!-- Right Column: Contact Form -->
+     <div class="md:w-1/2 bg-gray-800 rounded-xl p-8 shadow-lg">
+      <form action="https://formspree.io/f/mgebqzjo" method="POST" class="flex flex-col space-y-6">
+       <label class="flex flex-col">
+        <span class="text-gray-300 font-semibold mb-2">Name</span>
+        <input
+         type="text"
+         name="name"
+         required
+         class="input-focus rounded-md bg-gray-900 border border-gray-700 p-3 text-white placeholder-gray-500"
+         placeholder="Your Name"
+        />
+       </label>
+       <label class="flex flex-col">
+        <span class="text-gray-300 font-semibold mb-2">Email</span>
+        <input
+         type="email"
+         name="_replyto"
+         required
+         class="input-focus rounded-md bg-gray-900 border border-gray-700 p-3 text-white placeholder-gray-500"
+         placeholder="Your Email"
+        />
+       </label>
+       <label class="flex flex-col">
+        <span class="text-gray-300 font-semibold mb-2">Message</span>
+        <textarea
+         name="message"
+         rows="5"
+         required
+         class="input-focus rounded-md bg-gray-900 border border-gray-700 p-3 text-white placeholder-gray-500 resize-none"
+         placeholder="Your Message"
+        ></textarea>
+       </label>
+       <button
+        type="submit"
+        class="btn-hover bg-blue-600 text-white font-semibold py-3 rounded-md shadow-md flex justify-center items-center space-x-3 hover:bg-blue-700 transition"
+       >
+        <i class="fas fa-paper-plane animate-bounce"></i>
+        <span>Send Message</span>
+       </button>
+      </form>
+      <div class="mt-8 flex flex-wrap justify-center gap-6">
+       <a
+        href="#"
+        download
+        class="btn-hover bg-blue-600 text-white font-semibold py-3 px-6 rounded-md shadow-md flex items-center space-x-3 hover:bg-blue-700 transition"
+        title="Download My Resume"
+       >
+        <i class="fas fa-file-download animate-pulse"></i>
+        <span>Download Resume</span>
+       </a>
+       <a
+        href="https://github.com/shivani909274"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="btn-hover bg-gray-700 text-white font-semibold py-3 px-6 rounded-md shadow-md flex items-center space-x-3 hover:bg-gray-600 transition"
+        title="GitHub Profile"
+       >
+        <i class="fab fa-github animate-bounce"></i>
+        <span>GitHub Profile</span>
+       </a>
+      </div>
+     </div>
+    </div>
+   </section>
+
+   <style>
+    .glow-hover:hover {
+      box-shadow: 0 0 15px 3px rgba(59, 130, 246, 0.7);
+      transform: translateY(-4px);
+      transition: all 0.3s ease;
+    }
+    .btn-hover:hover {
+      background-color: #2563eb;
+      box-shadow: 0 0 12px 3px #2563eb;
+      transform: translateY(-2px);
+      transition: all 0.3s ease;
+    }
+    .input-focus:focus {
+      outline: none;
+      box-shadow: 0 0 8px 2px #3b82f6;
+      border-color: #3b82f6;
+      transition: all 0.3s ease;
+    }
+   </style>
+  </div>
+ </body>
+</html>
