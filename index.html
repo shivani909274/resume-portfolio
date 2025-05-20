@@ -476,23 +476,51 @@
        </div>
       </div>
       <!-- Right Panel: Contact Form -->
-      <form action="#" class="md:w-1/2 flex flex-col space-y-6" method="POST" novalidate="">
-       <label class="flex flex-col text-gray-300">
-        <span class="mb-2 font-semibold">
-         Subject
-        </span>
-        <input class="rounded-md bg-[#1a1a1a] border border-gray-600 p-3 text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-600" name="subject" placeholder="Enter subject" required="" type="text"/>
-       </label>
-       <label class="flex flex-col text-gray-300">
-        <span class="mb-2 font-semibold">
-         Message
-        </span>
-        <textarea class="rounded-md bg-[#1a1a1a] border border-gray-600 p-3 text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-600" name="message" placeholder="Write your message" required="" rows="6"></textarea>
-       </label>
-       <button class="self-start bg-blue-600 hover:bg-blue-700 transition text-white font-semibold px-6 py-3 rounded-md shadow-md" type="submit">
-        Send
-       </button>
-      </form>
+<form id="contactForm" class="md:w-1/2 flex flex-col space-y-6" method="POST" novalidate>
+  <!-- Name Field -->
+  <label class="flex flex-col text-gray-300">
+    <span class="mb-2 font-semibold">Name</span>
+    <input
+      class="rounded-md bg-[#1a1a1a] border border-gray-600 p-3 text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-600"
+      name="name"
+      placeholder="Enter your name"
+      required
+      type="text"
+    />
+  </label>
+
+  <!-- Email Field -->
+  <label class="flex flex-col text-gray-300">
+    <span class="mb-2 font-semibold">Email</span>
+    <input
+      class="rounded-md bg-[#1a1a1a] border border-gray-600 p-3 text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-600"
+      name="email"
+      placeholder="Enter your email"
+      required
+      type="email"
+    />
+  </label>
+
+  <!-- Message Field -->
+  <label class="flex flex-col text-gray-300">
+    <span class="mb-2 font-semibold">Message</span>
+    <textarea
+      class="rounded-md bg-[#1a1a1a] border border-gray-600 p-3 text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-600"
+      name="message"
+      placeholder="Write your message"
+      required
+      rows="6"
+    ></textarea>
+  </label>
+
+  <!-- Submit Button -->
+  <button
+    class="self-start bg-blue-600 hover:bg-blue-700 transition text-white font-semibold px-6 py-3 rounded-md shadow-md"
+    type="submit"
+  >
+    Send
+  </button>
+</form>
      </div>
     </section>
    </div>
@@ -555,5 +583,39 @@
    });
    </script>
   </div>
+
+<script>
+  const form = document.getElementById("contactForm");
+
+  form.addEventListener("submit", async function (e) {
+    e.preventDefault();
+
+    const formData = {
+      name: form.elements["name"].value,
+      email: form.elements["email"].value,
+      message: form.elements["message"].value,
+    };
+
+    try {
+      const response = await fetch("https://vn9a8mo6nk.execute-api.ap-southeast-2.amazonaws.com/prod/", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify(formData)
+      });
+
+      const result = await response.json();
+
+      alert(result.message || "Form submitted successfully!");
+      form.reset();
+    } catch (error) {
+      alert("Failed to submit the form. Please try again.");
+      console.error("Form submission error:", error);
+    }
+  });
+</script>
+
+
  </body>
 </html>
